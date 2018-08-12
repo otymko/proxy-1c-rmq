@@ -1,0 +1,14 @@
+{
+    "rabbitmq": {
+        "hostname": "localhost",
+        "port": "5672",
+        "username": "user",
+        "password": "password",
+        "vhost": "/"
+    },
+    "point1c": {
+        "hostname" : "",
+        "user": "",
+        "password": ""
+    }
+  }
