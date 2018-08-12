@@ -1,7 +1,9 @@
+var configNode = require('./config.json');
+
 var express = require('express');
     bodyParser = require('body-parser'); 
     app = express();
-    port = process.env.PORT || 3000;
+    port = process.env.PORT || configNode.port;
 
 var publisherClient = require('./rmq-publisher');
 
