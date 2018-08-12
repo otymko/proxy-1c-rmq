@@ -6,12 +6,12 @@
 ## Файл конфиуграции config.json
 Копируем шаблон конфигурации config.json.sample. Описание настроек:
 * rabbitmq - настройка поключения к rabbitmq
-** hostname - адрес
-** port - порт
-** username - пользователь
-** password - пароль
-** vhost - виртуальный хост
+ hostname - адрес
+  * port - порт
+  * username - пользователь
+  * password - пароль
+  * vhost - виртуальный хост
 * point1c - настройка подключения к 1С
-** hostname - адрес
-** user - пользователь
-** password - пароль
+  * hostname - адрес
+  * user - пользователь
+  * password - пароль
