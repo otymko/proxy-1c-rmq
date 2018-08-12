@@ -16,8 +16,8 @@ app.post('/publish', function(req, res) {
     var routing_key = req.param('routing_key');
     
     publisherClient.publish("", routing_key, new Buffer(req.body));
-    console.log("routing_key " + routing_key);
-    console.log("Sent " + guid);
+    now = new Date();
+    console.log("" + now + " / Sent to " + routing_key + " message: " + guid);
     res.send(guid);
 });
     
