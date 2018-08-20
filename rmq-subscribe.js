@@ -23,11 +23,9 @@ function start()
 {
     amqp.connect(setting, function (err, conn) {
         conn.createChannel(function (err, ch) {
-            //var q = configNode.point1c.queue;
-            var q = 'v2hsorder';
+            var q = configNode.point1c.queue;
             ch.assertQueue(q, { durable: true });
-            console.log("[AMQP] connected for receive");
-            console.log(q);
+            console.log("[AMQP] connected for receive: " + q);
             ch.consume(q, pushMessage, { noAck: true });
         });
     });
