@@ -10,6 +10,7 @@
     "point1c": {
         "hostname" : "",
         "user": "",
-        "password": ""
+        "password": "",
+        "queue": ""
     }
   }

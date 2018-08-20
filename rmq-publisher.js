@@ -32,7 +32,7 @@ function start() {
       return setTimeout(start, 1);
     });
 
-    console.log("[AMQP] connected");
+    console.log("[AMQP] connected for push");
     amqpConn = conn;
 
     startPublisher();

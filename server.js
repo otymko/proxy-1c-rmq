@@ -6,10 +6,10 @@ var express = require('express');
     port = process.env.PORT || configNode.port;
 
 var publisherClient = require('./rmq-publisher');
+var subcriberClient = require('./rmq-subscribe');
 
 app.use(bodyParser.text({ type: 'text/xml' , limit: '50mb'}))
 
-//http://localhost:3000/publish?guid=32323-32323-4332-222&exchange=directory&routing_key=site
 app.post('/publish', function(req, res) {
     var guid = req.param('guid');
     var exchange = req.param('exchange');
@@ -22,6 +22,8 @@ app.post('/publish', function(req, res) {
 });
     
 app.listen(port);
+
 publisherClient.startPub();
+subcriberClient.startSub();
     
 console.log('Server started! At http://localhost:' + port);
